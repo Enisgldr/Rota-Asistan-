@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RotaAsistanı - Dünya Rehberi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="loader" class="loader-overlay hidden">
+        <div class="spinner"></div>
+        <p>Yapay Zeka Rotaları Optimize Ediyor...</p>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-earth-americas"></i> RotaAsistanı <span class="badge">v2.0</span></h1>
+            <p>Gitmek istediğin şehri yaz, sana özel detaylı seyahat rehberini anında hazırla!</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-box">
+                <label for="cityInput"><i class="fa-solid fa-city"></i> Şehir Adı Giriniz</label>
+                <input type="text" id="cityInput" placeholder="Örn: Roma, Paris, İstanbul..." autocomplete="off">
+                <div id="autocompleteList" class="autocomplete-items hidden"></div>
+            </div>
+            <button id="planBtn"><i class="fa-solid fa-wand-magic-sparkles"></i> Planı Oluştur</button>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-target="all">Hepsini Göster</button>
+            <button class="filter-btn" data-target="rota">Seyahat Rotası</button>
+            <button class="filter-btn" data-target="tarih">Tarihi Yerler</button>
+            <button class="filter-btn" data-target="yemek">Yöresel Lezzetler</button>
+            <button class="filter-btn" data-target="kultur">Kültür & Alışveriş</button>
+        </div>
+
+        <div id="resultSection" class="result-section hidden">
+            <h2 id="resultTitle">Şehir Planı</h2>
+            
+            <div class="main-layout">
+                
+                <div class="content-area">
+                    <div class="category-card" data-category="rota">
+                        <h3><i class="fa-solid fa-calendar-days"></i> Günlük Seyahat Rotası</h3>
+                        <div id="daysContainer"></div>
+                    </div>
+
+                    <div class="category-card" data-category="tarih">
+                        <h3><i class="fa-solid fa-landmark"></i> Mutlaka Görülmesi Gereken Tarihi Yerler</h3>
+                        <ul id="historyList" class="info-list"></ul>
+                    </div>
+
+                    <div class="category-card" data-category="yemek">
+                        <h3><i class="fa-solid fa-utensils"></i> Meşhur Yöresel Lezzetler</h3>
+                        <ul id="foodList" class="info-list"></ul>
+                    </div>
+
+                    <div class="category-card" data-category="kultur">
+                        <h3><i class="fa-solid fa-masks-theater"></i> Kültürel Özellikler & Alışveriş</h3>
+                        <ul id="cultureList" class="info-list"></ul>
+                    </div>
+                </div>
+
+                <div class="map-sidebar">
+                    <div class="map-box">
+                        <h3><i class="fa-solid fa-map-location-dot"></i> Şehir Haritası</h3>
+                        <div class="map-container">
+                            <iframe id="googleMap" src="" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
