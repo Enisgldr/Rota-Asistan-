@@ -76,7 +76,6 @@ header p {
     font-weight: 600;
 }
 
-/* Gelişmiş Arama Alanı (SaaS Style) */
 .search-section {
     background: var(--bg-card);
     backdrop-filter: blur(16px);
@@ -121,7 +120,6 @@ input[type="text"]:focus {
     box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
 }
 
-/* Otomatik Tamamlama (Dropdown) */
 .autocomplete-items {
     position: absolute; 
     border: 1px solid var(--border-color); 
@@ -163,7 +161,6 @@ input[type="text"]:focus {
     box-shadow: 0 8px 25px rgba(0, 242, 254, 0.4);
 }
 
-/* Filtre Butonları */
 .filter-buttons {
     display: flex; 
     gap: 12px; 
@@ -189,7 +186,6 @@ input[type="text"]:focus {
     box-shadow: 0 5px 20px rgba(0, 242, 254, 0.3);
 }
 
-/* Layout Yapısı */
 .main-layout { 
     display: flex; 
     gap: 30px; 
@@ -207,7 +203,6 @@ input[type="text"]:focus {
     top: 30px;
 }
 
-/* Kart Tasarımları (Glassmorphism) */
 .category-card, .map-box {
     background: var(--bg-card);
     backdrop-filter: blur(16px);
@@ -235,4 +230,6 @@ h3 {
     border-bottom: 1px solid var(--border-color); 
     padding-bottom: 15px; 
 }
-h3 i {
+h3 i { color: var(--primary);
+    margin-right: 10px;
+}
